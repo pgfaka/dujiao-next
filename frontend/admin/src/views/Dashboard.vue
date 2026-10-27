@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { formatMoney, getLocalizedText } from '@/utils/format'
 import { formatSkuDisplayLabel } from '@/utils/sku'
 import type { AdminDashboardInventoryAlert } from '@/api/types'
-import DashboardAd from '@/components/admin/DashboardAd.vue'
+//======删除广告组件导入=========
 
 interface DashboardAlertItem {
   type: string
@@ -425,9 +425,7 @@ onMounted(() => {
       {{ dashboardError }}
     </div>
 
-    <div class="min-w-0">
-      <DashboardAd slot-code="dashboard_top_banner" layout="banner" />
-    </div>
+    <!-- ========== 删除第一处广告 ========== -->
 
     <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 [&>*]:min-w-0">
       <Card class="min-w-0">
@@ -548,9 +546,7 @@ onMounted(() => {
         </CardContent>
       </Card>
 
-      <div class="min-w-0">
-        <DashboardAd slot-code="dashboard_kpi_card" layout="card" />
-      </div>
+      <!-- ========== 删除第二处广告，这里删掉原来的 <div><DashboardAd ... /></div> ========== -->
     </div>
 
     <div class="grid gap-4 xl:grid-cols-2 [&>*]:min-w-0">
@@ -691,9 +687,7 @@ onMounted(() => {
       </Card>
     </div>
 
-    <div class="min-w-0">
-      <DashboardAd slot-code="dashboard_sponsored" layout="compact" />
-    </div>
+    <!-- ========== 删除第三处广告 ========== -->
 
     <div class="grid gap-4 xl:grid-cols-2 [&>*]:min-w-0">
       <Card class="min-w-0">
